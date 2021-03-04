@@ -6,12 +6,14 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
-  {{> info}}
+  {{> allData}}
+
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+  <h3>Number of times: {{counter}}</h3>
 </template>
 
 <template name="info">
@@ -22,4 +24,20 @@
     <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
   </ul>
+</template>
+
+<template name="addNum">
+  <h2>Choose two numbers to add</h2>
+  <input id="n1" type="text"> + <input id="n2" type="text"> <button id="js-adding">Sum it up</button>
+  <p>{{num1}} + {{num2}} = {{ans}}</p>
+</template>
+
+<template name="allData">
+  <h3 style="width: 400px;">Hello my name is {{guestName}}</h3>
+  {{#if mySkill}}
+  <p>My skill level is {{skill}}.</p>
+  {{else}}
+  <p>{{skill}} is not a skill.</p>
+  {{/if}}
+  <h6>Thank you for viewing.</h6>
 </template>
