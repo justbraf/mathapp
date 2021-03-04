@@ -6,7 +6,8 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
-  {{> allData}}
+  {{> addNum}}
+  {{> subNum}}
 
 </body>
 
@@ -28,8 +29,14 @@
 
 <template name="addNum">
   <h2>Choose two numbers to add</h2>
-  <input id="n1" type="text"> + <input id="n2" type="text"> <button id="js-adding">Sum it up</button>
+  <input id="n1a" type="text"> + <input id="n2a" type="text"> <button id="js-adding">Sum it up</button>
   <p>{{num1}} + {{num2}} = {{ans}}</p>
+</template>
+
+<template name="subNum">
+  <h2>Choose two numbers to subtract</h2>
+  <input id="n1s" type="text"> - <input id="n2s" type="text"> <button id="js-subing">Sub it</button>
+  <p>{{num1}} - {{num2}} = {{ans}}</p>
 </template>
 
 <template name="allData">
