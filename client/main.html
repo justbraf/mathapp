@@ -8,6 +8,8 @@
   {{> hello}}
   {{> addNum}}
   {{> subNum}}
+  {{> mulNum}}
+  {{> divNum}}
 
 </body>
 
@@ -37,6 +39,18 @@
   <h2>Choose two numbers to subtract</h2>
   <input id="n1s" type="text"> - <input id="n2s" type="text"> <button id="js-subing">Sub it</button>
   <p>{{num1}} - {{num2}} = {{ans}}</p>
+</template>
+
+<template name="mulNum">
+  <h2>Choose two numbers to multiply</h2>
+  <input id="n1m" type="text"> * <input id="n2m" type="text"> <button id="js-multiply">Multiply it</button>
+  <p>{{num1}} * {{num2}} = {{ans}}</p>
+</template>
+
+<template name="divNum">
+  <h2>Choose two numbers to divide</h2>
+  <input id="n1d" type="text"> / <input id="n2d" type="text"> <button id="js-divide">Divide it</button>
+  <p>{{num1}} / {{num2}} = {{ans}}</p>
 </template>
 
 <template name="allData">
