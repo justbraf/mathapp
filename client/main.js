@@ -8,27 +8,6 @@ import './sub.js';
 import './mul.js';
 import './div.js';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
-
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
-  },
-});
-
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
-  'click h3'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 2);
-  },
-});
 
 let gName = "Brad";
 
