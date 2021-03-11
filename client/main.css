@@ -1,4 +1,22 @@
 body {
   padding: 10px;
   font-family: sans-serif;
+  background: url('/chris-liverani-ViEBSoZH6M4-unsplash.jpg');
+}
+
+.userInput{
+  height: 200px;
+  width: 240px;
+  font-size: 200px;
+  text-align: center;
+}
+
+.operator{
+  font-size: 200px;
+  text-align: center;
+  height: 200px;
+}
+
+.container{
+  background: #ffffffd0;
 }

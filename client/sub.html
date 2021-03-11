@@ -1,0 +1,38 @@
+<template name="addNum">
+    <div class="row justify-content-around">
+      <div class="col">
+        <div class="row justify-content-around">
+          <div class="col-10 text-center mb-2">
+            <h2>Choose two numbers to add</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+              <input class="userInput" id="n1a" type="text">
+          </div>
+          <div class="col text-center">
+            <span class="operator">+</span>
+          </div>
+          <div class="col">
+            <input class="userInput" id="n2a" type="text">
+          </div>
+          <div class="col text-center">
+            <span class="operator">=</span>
+          </div>
+          <div class="col">
+            <input class="userInput" id="ansa" type="text" value="{{ans}}">
+          </div>
+         </div> <!-- user input row -->
+        <div class="row">
+          <div class="col-2">
+            <button class="btn btn-primary" id="js-adding">Sum it up</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>{{num1}} + {{num2}} = {{ans}}</p>
+          </div>
+        </div>      
+      </div>    
+    </div>    
+  </template>

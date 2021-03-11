@@ -3,37 +3,75 @@
 </head>
 
 <body>
-  <h1>Welcome to Math App!</h1>
+  <div class="container">
+    <div class="row justify-content-around mb-5">
+      <div class="col-7">
+        <h1>Welcome to Math App!</h1>
+      </div>
+    </div>
+    
+    {{> mathChoice}}
+    {{> addNum}}
+    {{> subNum}}
+    {{> mulNum}}
+    {{> divNum}}
+  </div>
   
-  {{> addNum}}
-  {{> subNum}}
-  {{> mulNum}}
-  {{> divNum}}
 
 </body>
 
-<template name="addNum">
-  <h2>Choose two numbers to add</h2>
-  <input id="n1a" type="text"> + <input id="n2a" type="text"> <button id="js-adding">Sum it up</button>
-  <p>{{num1}} + {{num2}} = {{ans}}</p>
+<template name="mathChoice">
+  <div class="row justify-content-around mb-5">
+    <div class="col-3 text-center">
+      {{> starsRating id="rating" rating=3 size='lg' mutable=true}}
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col">
+      <button class="btn btn-success js-showAdd">Add</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-info  js-showSub">Subtract</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-info js-showMul">Multiply</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-info js-showDiv">Divide</button>
+    </div>
+  </div>
 </template>
 
+
+
 <template name="subNum">
-  <h2>Choose two numbers to subtract</h2>
-  <input id="n1s" type="text"> - <input id="n2s" type="text"> <button id="js-subing">Sub it</button>
-  <p>{{num1}} - {{num2}} = {{ans}}</p>
+  <div class="row justify-content-around subNum d-none">
+    <div class="col-10">
+      <h2>Choose two numbers to subtract</h2>
+      <input class="userInput" id="n1s" type="text"> <span class="operator">-</span> <input class="userInput" id="n2s" type="text"> <button class="btn btn-primary" id="js-subing">Sub it</button>
+      <p>{{num1}} - {{num2}} = {{ans}}</p>
+    </div>
+  </div>
 </template>
 
 <template name="mulNum">
-  <h2>Choose two numbers to multiply</h2>
-  <input id="n1m" type="text"> * <input id="n2m" type="text"> <button id="js-multiply">Multiply it</button>
-  <p>{{num1}} * {{num2}} = {{ans}}</p>
+  <div class="row justify-content-around d-none">
+    <div class="col-10">
+      <h2>Choose two numbers to multiply</h2>
+      <input class="userInput" id="n1m" type="text"> <span class="operator">*</span> <input class="userInput" id="n2m" type="text"> <button class="btn btn-primary" id="js-multiply">Multiply it</button>
+      <p>{{num1}} * {{num2}} = {{ans}}</p>
+    </div>
+  </div>
 </template>
 
 <template name="divNum">
-  <h2>Choose two numbers to divide</h2>
-  <input id="n1d" type="text"> / <input id="n2d" type="text"> <button id="js-divide">Divide it</button>
-  <p>{{num1}} / {{num2}} = {{ans}}</p>
+  <div class="row justify-content-around d-none">
+    <div class="col-10">
+      <h2>Choose two numbers to divide</h2>
+      <input class="userInput" id="n1d" type="text"> <span class="operator">/</span> <input class="userInput" id="n2d" type="text"> <button class="btn btn-primary" id="js-divide">Divide it</button>
+      <p>{{num1}} / {{num2}} = {{ans}}</p>
+    </div>
+  </div>
 </template>
 
 <template name="allData">
