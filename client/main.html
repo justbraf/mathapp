@@ -5,7 +5,7 @@
 <body>
   <div class="container">
     <div class="row justify-content-around mb-5">
-      <div class="col-7">
+      <div class="col-7 text-center">
         <h1>Welcome to Math App!</h1>
       </div>
     </div>
@@ -22,21 +22,21 @@
 
 <template name="mathChoice">
   <div class="row justify-content-around mb-5">
-    <div class="col-3 text-center">
+    <div class="col-2 px-auto">
       {{> starsRating id="rating" rating=3 size='lg' mutable=true}}
     </div>
   </div>
   <div class="row mb-5">
-    <div class="col">
+    <div class="col text-center">
       <button class="btn btn-success js-showAdd">Add</button>
     </div>
-    <div class="col">
+    <div class="col text-center">
       <button class="btn btn-info  js-showSub">Subtract</button>
     </div>
-    <div class="col">
+    <div class="col text-center">
       <button class="btn btn-info js-showMul">Multiply</button>
     </div>
-    <div class="col">
+    <div class="col text-center">
       <button class="btn btn-info js-showDiv">Divide</button>
     </div>
   </div>

@@ -6,17 +6,18 @@ body {
 
 .userInput{
   height: 200px;
-  width: 240px;
-  font-size: 200px;
+  width: 200px;
+  font-size: 140px;
   text-align: center;
 }
 
 .operator{
-  font-size: 200px;
-  text-align: center;
-  height: 200px;
+  font-size: 140px;
+  /* text-align: center;
+  height: 200px; */
 }
 
 .container{
-  background: #ffffffd0;
+  background: #000000d0;
+  color: white;
 }
